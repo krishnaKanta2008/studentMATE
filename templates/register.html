@@ -71,7 +71,9 @@
 
                 <div class="card-body">
                   {% if error %}
-                  <p>{{ error }}</p>
+                  <center>
+                    <p style="color: red; margin-top: 15px; margin-bottom: -10px;">{{ error }}</p>
+                  </center>
                   {% endif %}
 
                   <div class="pt-4 pb-2">
@@ -81,8 +83,8 @@
 
                   <form class="row g-3 needs-validation" method="POST" action="/register">
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Your Name</label>
-                      <input type="text" name="username" placeholder="Name" required class="form-control">
+                      <label for="Name" class="form-label">Your Name</label>
+                      <input type="text" name="name" placeholder="Name" required class="form-control">
                       <div class="invalid-feedback">Please, enter your name!</div>
                     </div>
 
