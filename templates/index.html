@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>studentMATE</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css” />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="/static/img/logoalt2.webp" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+            ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #343a40;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      -ms-overflow-style: none;
+      background-color: #adb5bd;
+      border-radius: 25px;
+      border: 3px #dee2e6;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="{{url_for('index')}}" class="logo d-flex align-items-center">
+                <img src="/static/img/logoalt2.webp" alt="">
+                <span class="d-none d-lg-block">studentMATE</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed " href="{{url_for('index')}}">
+                    <i class="bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{url_for('teacher_login')}}">
+                    <i class="bi bi-person"></i>
+                    <span>Teacher Login</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{url_for('student_login')}}">
+                    <i class="bi bi-person-check"></i>
+                    <span>Student Login</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{url_for('contact')}}">
+                    <i class="bi bi-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{url_for('overview')}}">
+                    <i class="bi bi-dash-circle"></i>
+                    <span>How To Use</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{url_for('about')}}">
+                    <i class="bi bi-person-circle"></i>
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main id="main" class="main">
+
+        <section class="section dashboard">
+            <div class="row">
+                
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/img/3d-render-illustration-of-project-management-analysis-result-icon-png.webp"
+                                class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h1 class="card-title" style="font-size: 40px;">studentMATE <span style="font-size: 30px;">: Modern Student Management System</span></h1>
+                                <p class="card-text">The online student management system is designed to facilitate the management of student records and marks. It allows
+                                teachers to register, log in, and manage student data. Teachers can update the marks of students for different subjects.
+                                Students can also register, log in, and view their marks. The system uses SQLite as the database for storing teacher and
+                                student information.</p>
+                                <p class="card-text">Teachers are the primary users of the system. They can register by providing a unique username and password. Once
+                                registered, they can log in to access the teacher dashboard. The teacher dashboard serves as a centralized hub for
+                                managing student data. It displays the total number of registered students and provides a list of all students. Teachers
+                                can view the details of each student, including their username and marks obtained in different subjects.</p>
+                                <p class="card-text">The system allows teachers to update student marks. By clicking on a student's name or ID, teachers can access the mark
+                                editing page for that particular student. In the mark editing page, teachers can enter the marks for different subjects.
+                                The updated marks are then saved in the database, ensuring accurate record-keeping.</p>
+                                <p class="card-text">Students, on the other hand, have their own login functionality. They can register for an account by providing a unique
+                                username and password. Once registered, they can log in to access their individual dashboard. The student dashboard
+                                provides a personalized view for each student. It displays their username and the marks they have obtained in different
+                                subjects. Students can easily check their performance and track their progress over time.</p>
+                                <p class="card-text">To enhance the user experience, the system includes additional pages such as a contact page and an about page. The
+                                contact page provides information on how to get in touch with the system administrators or support team. The about page
+                                gives a brief overview of the project, including its purpose and goals. These pages add value by providing users with
+                                relevant information and fostering transparency.
+                                
+                                Furthermore, the system includes a "Coming Soon" page, which indicates that additional features or functionalities are
+                                planned for future implementation. This hints at the system's continuous development and improvement to meet evolving
+                                needs.</p>
+                                <p class="card-text">Overall, the online student management system simplifies the process of managing student records and marks. It
+                                streamlines communication between teachers and students, provides real-time access to important information, and
+                                promotes efficient record-keeping. By leveraging web technologies and user-friendly interfaces, the system aims to
+                                enhance the educational experience and contribute to a more organized and effective learning environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Problem Statement & Solution</h5>
+                            <b>Problem Statement :</b>
+                            <p class="card-text">Create an online student management system that allows teachers to log in, manage student records, and update their
+                            marks. Students should be able to log in, view their marks, and register for an account if they don't have one.</p>
+                            <b>Solution :</b>
+                            <p class="card-text">The provided code implements a solution for the student management system using Flask, SQLite, and HTML templates. It
+                            consists of several routes that handle different functionalities, including teacher and student login, registration,
+                            dashboard views, mark editing, and basic website pages.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Features of the Online Student Management System:</h5>
+                            <b>Teacher Registration and Login :</b> Teachers can register with a unique username and password. They can log in to access the teacher dashboard.<br><br>
+                            <b>Teacher Dashboard:</b> Teachers can view the list of students and the total number of registered students. They can navigate to the mark editing page for each student to update their marks.<br><br>
+                            <b>Mark Editing:</b> Teachers can edit the marks of each student individually by accessing the mark editing page. They can
+                            enter numeric marks for different subjects and save the changes.<br><br>
+                            <b>Student Registration and Login:</b> Students can register with a unique username and password. They can log in to access
+                            their individual dashboard.<br><br>
+                            <b>Student Dashboard:</b> Students can view their marks for different subjects. The dashboard displays their username and the marks obtained in each subject.<br><br>
+                            <b>Contact and About Pages:</b> The system provides additional static pages such as contact information and an about page to
+                            provide more details about the project.
+                            Coming Soon Page: There is a placeholder page indicating that more features or functionalities are coming soon.
+
+                        </div>
+
+
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>studentMATE</span></strong>. All Rights Reserved
+        </div>
+    </footer>
+
+
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

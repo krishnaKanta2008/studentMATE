@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>studentMATE</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css” />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="/static/img/logoalt2.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css” />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/css/style.css" rel="stylesheet">
+  <link href="/static/css/styles.css" rel="stylesheet">
+  <link href="/static/css/contact-style.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #212529;
+    }
+
+    .company-info {
+      background-color: #343A40;
+
+
+    }
+
+    .contact {
+      background-color: #495057;
+    }
+
+    input {
+      background-color: #CED4DA;
+    }
+
+    label {
+      color: aliceblue;
+    }
+
+    textarea {
+      background-color: #CED4DA;
+    }
+
+    h3 {
+      color: aliceblue;
+    }
+
+    .wrapper {
+      box-shadow: none !important;
+    }
+
+    li {
+      color: aliceblue;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="{{url_for('index')}}" class="logo d-flex align-items-center">
+        <img src="/static/img/logoalt2.webp" alt="">
+        <span class="d-none d-lg-block">studentMATE</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="{{url_for('index')}}">
+          <i class="bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('teacher_login')}}">
+          <i class="bi bi-person"></i>
+          <span>Teacher Login</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('student_login')}}">
+          <i class="bi bi-person-check"></i>
+          <span>Student Login</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('contact')}}">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('overview')}}">
+          <i class="bi bi-dash-circle"></i>
+          <span>How To Use</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('about')}}">
+          <i class="bi bi-person"></i>
+          <span>About</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+
+  <main id="main" class="main">
+    <div class="container">
+
+      <div class="wrapper">
+        <div class="company-info">
+          <h3 style="text-align: center;">studentMATE</h3>
+          <img src="/static/img/3d-render-illustration-of-project-management-analysis-result-icon-png.webp"
+            width="320px" height="320px">
+          <ul>
+
+            <br>
+            <li>Drop us a line, and we'll get back to you in no time!</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Email Us</h3>
+          <div class="alert">Your message has been sent</div>
+          <form id="contactForm">
+            <p>
+              <label>Name</label>
+              <input type="text" name="name" id="name" required>
+            </p>
+            <p>
+              <label>Designation</label>
+              <input type="text" name="company" id="company">
+            </p>
+            <p>
+              <label>Email Address</label>
+              <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+              <label>Phone Number</label>
+              <input type="text" name="phone" id="phone">
+            </p>
+            <p class="full">
+              <label>Message</label>
+              <textarea name="message" rows="5" id="message"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit">Submit</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="/static/js/contact.js"></script>
+
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>studentMATE</span></strong>. All Rights Reserved
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <script>
+
+    const config = {
+      apiKey: "AIzaSyCS6MzsAo9Aq6QRvRgVJ1rYyiDyCGAEsL4",
+      authDomain: "g-contact-predict-bay.firebaseapp.com",
+      databaseURL: "https://g-contact-predict-bay-default-rtdb.firebaseio.com",
+      projectId: "g-contact-predict-bay",
+      storageBucket: "g-contact-predict-bay.appspot.com",
+      messagingSenderId: "356036840004",
+      appId: "1:356036840004:web:a0bb31f5adea5de0e7ca11",
+      measurementId: "G-707Y2MG55W"
+    };
+
+    firebase.initializeApp(config);
+    var messagesRef = firebase.database().ref('messages');
+
+    document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+    function submitForm(e) {
+      e.preventDefault();
+
+      var name = getInputVal('name');
+      var company = getInputVal('company');
+      var email = getInputVal('email');
+      var phone = getInputVal('phone');
+      var message = getInputVal('message');
+
+      saveMessage(name, company, email, phone, message);
+
+      document.querySelector('.alert').style.display = 'block';
+
+      setTimeout(function () {
+        document.querySelector('.alert').style.display = 'none';
+      }, 3000);
+
+      document.getElementById('contactForm').reset();
+    }
+
+    function getInputVal(id) {
+      return document.getElementById(id).value;
+    }
+
+    function saveMessage(name, company, email, phone, message) {
+      var newMessageRef = messagesRef.push();
+      newMessageRef.set({
+        name: name,
+        company: company,
+        email: email,
+        phone: phone,
+        message: message
+      });
+    }
+
+
+  </script>
+
+
+  <script src="/static/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/main.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+</body>
+
+</html>
