@@ -36,12 +36,3 @@ Overall, the online student management system simplifies the process of managing
                               
 <b>🌐 Coming Soon Page :</b> There is a placeholder page indicating that more features or functionalities are coming soon.
 
-# Website Preview
-
-<img src="img/img1.png">
-
-<img src="img/img2.png">
-
-<img src="img/img3.png">
-
-<img src="img/img4.png">
