@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teacher Register</title>
+</head>
+
+<body>
+    <h1>Register as Teacher</h1>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="/teacher_register">
+        <input type="text" name="username" placeholder="Username" required><br><br>
+        <input type="password" name="password" placeholder="Password" required><br><br>
+        <input type="number" name="class" placeholder="class" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+
+</html>

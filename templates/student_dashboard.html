@@ -73,51 +73,32 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link collapsed " href="{{url_for('view_attendance')}}">
+              <i class="bi bi-journal-check"></i>
+              <span>Attendance</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link collapsed " href="{{url_for('coming')}}">
               <i class="bi bi-file-earmark-fill"></i>
               <span>Study Material</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link collapsed " href="{{url_for('coming')}}">
-              <i class="bi bi-journal-check"></i>
-              <span>Attendance</span>
-            </a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link collapsed" href="{{url_for('teacher_login')}}">
-              <i class="bi bi-person"></i>
-              <span>Teacher Login</span>
-            </a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link collapsed" href="{{url_for('student_login')}}">
-              <i class="bi bi-person-check"></i>
-              <span>Student Login</span>
-            </a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link collapsed" href="{{url_for('contact')}}">
-              <i class="bi bi-envelope"></i>
-              <span>Contact</span>
+            <a class="nav-link collapsed" href="{{url_for('coming')}}">
+              <i class="bi bi-cash-coin"></i>
+              <span>Fees Details</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link collapsed" href="{{url_for('overview')}}">
-              <i class="bi bi-dash-circle"></i>
-              <span>How To Use</span>
+            <a class="nav-link collapsed" href="{{url_for('coming')}}">
+              <i class="bi bi-people-fill"></i>
+              <span>Counselling</span>
             </a>
           </li>
-      
-          <li class="nav-item">
-            <a class="nav-link collapsed" href="{{url_for('about')}}">
-              <i class="bi bi-person-circle"></i>
-              <span>About</span>
-            </a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link collapsed" href="{{url_for('logout')}}">
-              <i class="bi bi-arrow-up-short"></i>
+              <i class="bi bi-box-arrow-left"></i>
               <span>logout</span>
             </a>
           </li>
@@ -128,8 +109,8 @@
   <main id="main" class="main">
     <div class="container">
       <center>
-        <h1 style="font-size: 60px;">Welcome {{ username }}</h1>
-        
+        <h1 style="font-size: 60px;">Welcome {{ username }} </h1>
+        <h2 style="font-size: 50px;">Class: {{ class_name }}</h2>
         <h3>Marks</h3>
       </center>
     {% if marks %}
